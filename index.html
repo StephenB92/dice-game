@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Dice Game - A fun game for two! First player to 100 points wins!!">
+    <meta name="description" content="Dice Game - A fun game for two! First player to 100 points wins!!">
     <meta name="keywords" content="dice game, two players, dice, game">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Dice Game</title>
@@ -14,34 +13,39 @@
 
 <body>
 
-    <section class="player">
-        <h1 class="name">Player 1</h1>
+    <header>
+        <button class="rules">Rules</button>
+    </header>
+    <section class="player active-player">
+        <h2 class="name">Player 1</h2>
         <div class="score">
             <p>Current Score</p>
+            <p class="current-score-0">0</p>
         </div>
         <div class="total">
             <p>Total Score</p>
-            <p>0</p>
+            <p class="total-score-0">0</p>
         </div>
+    </section>
+
+    <section class="controls">
+        <img src="assets/images/dice-1.png" alt="Playing Dice" class="dice" />
+        <button class="button button-new">New Game</button>
+        <button class="button button-roll">Roll Dice</button>
+        <button class="button button-bank">Bank Points</button>
     </section>
 
     <section class="player">
-        <h1 class="name">Player 2</h1>
+        <h2 class="name">Player 2</h2>
         <div class="score">
-            <p>Current Score</p>
+            <p class="current-score-1">Current Score</p>
+            <p>0</p>
         </div>
         <div class="total">
             <p>Total Score</p>
-            <p>0</p>
+            <p class="total-score-1">0</p>
         </div>
     </section>
-
-    <section>Rules</section>
-
-    <button>New Game</button>
-    <button>Roll Dice</button>
-    <button>Bank</button>
-
 
     <script src="script.js"></script>
 </body>
