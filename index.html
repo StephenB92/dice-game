@@ -13,41 +13,71 @@
 
 <body>
 
-    <header>
-        <button class="rules">Rules</button>
-    </header>
-    <section class="player active-player">
-        <h2 class="name">Player 1</h2>
-        <div class="score">
-            <p>Current Score</p>
-            <p class="current-score-0">0</p>
-        </div>
-        <div class="total">
-            <p>Total Score</p>
-            <p class="total-score-0">0</p>
-        </div>
-    </section>
+    <!--Playing Board-->
 
-    <section class="controls">
+    <main>
+        <section class="player active-player">
+            <h2 class="name">Player 1</h2>
+            <div class="score">
+                <p>Current Score</p>
+                <p class="current-score-0">0</p>
+            </div>
+            <div class="total">
+                <p>Total Score</p>
+                <p class="total-score-0">0</p>
+            </div>
+        </section>
+        <section class="player">
+            <h2 class="name">Player 2</h2>
+            <div class="score">
+                <p>Current Score</p>
+                <p class="current-score-1">0</p>
+            </div>
+            <div class="total">
+                <p>Total Score</p>
+                <p class="total-score-1">0</p>
+            </div>
+        </section>
+    </main>
+
+    <!--Section with Dice image and Rules Modal-->
+
+    <section>
         <img src="assets/images/dice-1.png" alt="Playing Dice" class="dice" />
         <button class="button button-new">New Game</button>
-        <button class="button button-roll">Roll Dice</button>
-        <button class="button button-bank">Bank Points</button>
+        <button class="button show-rules">Rules</button>
+        <div class="rules hide">
+            <button class="close-rules">&times;</button>
+            <h1>Rules of the Game</h1>
+            <p>Welcome to Dice Game!! The Dice Game is a simple yet fun game for two players.</p>
+            <br>
+            <p>Roll the dice to add to your score - the first player to reach 100 points wins!! Be wary though, if you
+                roll a one you will lose all of your current points. To avoid this, press the bank button to save your
+                current points and pass the game to the next player.</p>
+            <ol>
+                <li>Player 1 will start the game.</li>
+                <li>Click the "Roll Dice" button to add to your score.</li>
+                <li>You can roll the dice as many times as you wish until you click the "Bank" button OR roll a 1,
+                    then
+                    control switches to the other player.</li>
+                <li>Click the "Bank" button to save your current points and pass control to the other player.</li>
+                <li>If you roll a 1, you will lose all points that have not been banked and control will switch to
+                    the
+                    other player.</li>
+                <li>First player to reach 100 total points wins!!</li>
+            </ol>
+        </div>
+        <div class="rules-overlay hide"></div>
     </section>
 
-    <section class="player">
-        <h2 class="name">Player 2</h2>
-        <div class="score">
-            <p class="current-score-1">Current Score</p>
-            <p>0</p>
-        </div>
-        <div class="total">
-            <p>Total Score</p>
-            <p class="total-score-1">0</p>
-        </div>
-    </section>
+    <!--Footer with Game Controls-->
 
-    <script src="script.js"></script>
+    <footer class="controls">
+        <button class="button">Roll Dice</button>
+        <button class="button">Bank Points</button>
+    </footer>
+
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
