@@ -123,7 +123,7 @@ main {
 }
 
 .total {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: auto;
     text-align: center;
 }
@@ -176,4 +176,66 @@ main {
     top: 12.5rem;
     transform: translateX(-50%);
     height: 7.5rem;
+}
+
+/* Media Queries for responsiveness */
+
+/* Media Queries for screens smaller than 680px */
+
+@media screen and (max-width: 680px) {
+    html {
+        font-size: 10px;
+    }
+    
+    main {
+        height: 35rem;
+    }
+    
+    .button {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+
+    .button-new {
+        top: 120px;
+    }
+
+    .dice {
+        height: 5rem;
+        top: 160px;
+    }
+
+    .show-rules {
+        top: 225px;
+    }
+}
+
+/* Media Queries for screens smaller than 330px */
+
+@media screen and (max-width: 330px) {
+    html {
+        font-size: 8px;
+    }
+
+    main {
+        height: 35rem;
+    }
+    
+    .button {
+        font-size: 7.5px;
+        padding: 2px 6px;
+    }
+
+    .button-new {
+        top: 100px;
+    }
+
+    .dice {
+        height: 5rem;
+        top: 130px;
+    }
+
+    .show-rules {
+        top: 185px;
+    }
 }

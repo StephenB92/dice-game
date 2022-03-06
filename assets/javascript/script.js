@@ -29,3 +29,16 @@ document.addEventListener('keydown', function (event) {
         closeModal();
     }
 });
+
+const playerName1 = document.querySelector('.input-name-1')
+
+const name1 = function() {
+    let myName = prompt("Enter your name");
+    document.getElementsByClassName('.input-name-1').textContent = myName;
+};
+
+playerName1.addEventListener('click', name1);
+
+
+
+
