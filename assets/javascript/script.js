@@ -1,4 +1,7 @@
 /* Rules Modal Window */
+/* Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
+From Zero to Expert", Modal Window Section for Code used to create and style the 
+"rules" modal window */
 
 const rules = document.querySelector('.rules');
 const rulesOverlay = document.querySelector('.rules-overlay');

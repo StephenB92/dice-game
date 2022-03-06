@@ -8,6 +8,9 @@
 }
 
 /* Rules Modal Window */
+/* Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
+From Zero to Expert", Modal Window Section for Code used to create and style the 
+"rules" modal window */
 
 .show-rules {
     top: 350px;
@@ -27,41 +30,8 @@
     background: none;
 }
 
-.rules h1 {
-    color: black;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.rules p {
-    color: black;
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.rules li {
-    color: black;
-    padding: 10px;
-    font-size: 1rem;
-}
-
 .hide {
     display: none;
-}
-
-.rules {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    background-color: white;
-    padding: 6rem;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
 }
 
 .rules-overlay {
@@ -72,7 +42,39 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
-    z-index: 5;
+    z-index: 1;
+}
+
+.rules {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.rules h1 {
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.rules p {
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.rules li {
+    color: black;
+    padding: 10px;
+    font-size: 1rem;
 }
 
 /* Main Page Layout */
@@ -85,13 +87,11 @@ body {
 
 main {
     position: relative;
-    width: 60rem;
+    width: 100%;
     height: 30rem;
     background-color: rgba(255, 255, 255, 0.50);
     border-radius: 10px;
     display: flex;
-    overflow: hidden;
-    transform: translateX(30%);
 }
 
 /* Game Elements */
@@ -117,7 +117,7 @@ main {
 }
 
 .score {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -132,28 +132,16 @@ main {
     background-color: rgba(255, 0, 0, 0.35);
 }
 
-.active-player .name {
-    font-weight: 800;
-}
-
-.active-player .score {
-    font-weight: 600;
-}
-
-
 /* Controls and Dice Styling */
 
 .button {
     color: #444;
-    background: none;
-    border: none;
     cursor: pointer;
     font-family: inherit;
     font-size: 1rem;
     background-color: white;
     padding: 7px 15px;
     border-radius: 50px;
-    backdrop-filter: blur(10px);
 }
 
 .button-new {
@@ -168,8 +156,18 @@ main {
     display: inline-block;
     text-align: center;
     width: 100%;
-    height: 50px;
+    height: auto;
     padding-top: 15px;
+}
+
+.controls h3 {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.controls button {
+    margin-bottom: 5px;
 }
 
 .dice {
