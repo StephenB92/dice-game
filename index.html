@@ -13,37 +13,41 @@
 
 <body>
 
-    <!--Playing Board-->
+    <!-- Playing Board -->
 
     <main>
-        <section class="player active-player">
-            <h2 class="name input-name-1">Enter your Name</h2>
+        <section class="player player-0 active-player">
+            <h2 class="name">
+                <div class="input-name-1">Enter your<br>Name</div>
+            </h2>
             <div class="score">
                 <p>Current Score</p>
-                <p class="current-score-0">0</p>
+                <p class="score-0">0</p>
             </div>
             <div class="total">
                 <p>Total Score</p>
-                <p class="total-score-0">0</p>
+                <p class="total-0">0</p>
             </div>
         </section>
-        <section class="player">
-            <h2 class="name input-name-2">Player 2</h2>
+        <section class="player player-1">
+            <h2 class="name">
+                <div class="input-name-2">Enter your<br>Name</div>
+            </h2>
             <div class="score">
                 <p>Current Score</p>
-                <p class="current-score-1">0</p>
+                <p class="score-1">0</p>
             </div>
             <div class="total">
                 <p>Total Score</p>
-                <p class="total-score-1">0</p>
+                <p class="total-1">0</p>
             </div>
         </section>
     </main>
 
-    <!--Section with Dice image and Rules Modal-->
+    <!-- Central Section with Dice image, New Game button and Rules Modal -->
 
     <section>
-        <img src="assets/images/dice-1.png" alt="Playing Dice" class="dice" />
+        <img src="assets/images/dice-1.png" alt="Playing Dice" class="dice hide" />
         <button class="button button-new">New Game</button>
         <button class="button show-rules">Rules</button>
         <div class="rules hide">
@@ -70,12 +74,12 @@
         <div class="rules-overlay hide"></div>
     </section>
 
-    <!--Footer with Game Controls-->
+    <!-- Footer with Game Controls -->
 
     <footer class="controls">
         <h3>Roll or Bank?</h3>
-        <button class="button">Roll Dice</button>
-        <button class="button">Bank Points</button>
+        <button class="button button-roll">Roll Dice</button>
+        <button class="button button-bank">Bank Points</button>
     </footer>
 
     <script src="assets/javascript/script.js"></script>

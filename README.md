@@ -13,6 +13,7 @@ The Dice Game is a simple yet fun game for two players. Roll the dice to add to 
 - Between the scores for both players - you can see the interactive buttons labelled "New Game" and "Rules" with an image of the dice rolled last displayed in between.
 - The "New Game" button, which appears only when the current game is over, will reset the game to it's initial state when clicked.
 - The "Rules" button when clicked opens a modal window that contains a short description of the game along with the rules.
+- Players can also click on the "Enter Your Name" text and a prompt window will appear asking the player to type in their name. What they enter will then appear on the Main Page.
 
 2. The Rules modal window
 - As mentioned above, this window will only appear when the "Rules" button on the main game page is clicked.
@@ -43,9 +44,15 @@ The Dice Game is a simple yet fun game for two players. Roll the dice to add to 
 2. CSS3
 3. JavaScript
 
+## Bugs and Fixes
+
+1. I experienced an issue with the "Enter your Name" function where the text entered in the prompt window was not then appearing in the HTML page. This was due to me using the    .getElementsByClassName function method rather than .querySelector. Once I changed the method to .querySelector, the text entered in the prompt window appeared in the main game area as intended.
+
 ## Credit
 
 ### Code
+- Credit to Jonas Schmedmann and the Udemy course [The Complete Javascript Course 2022: 
+From Zero to Expert](https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648433#questions) where the template of the Dice Game was used in this project. The front-end layout was used as a template for this project also.
 - Credit to Jonas Schmedmann and the Udemy course [The Complete Javascript Course 2022: 
 From Zero to Expert, Modal Window Section](https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648433#questions) for the code used to create and style the "rules" modal window. As the project being created was also inspired by another module on this project, the separate modal window section was a good fit for the intended project and the inclusion of the feature to display the rules to the players without needlessly cluttering the main game page.
 - Credit to [Golang](https://www.golangprograms.com/example-to-take-user-input-and-display-on-screen-using-javascript.html) for information and code used to implement feature allowing users to enter their names to the main page.
