@@ -1,10 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
+/* Main Page Layout */
+
 * {
     margin: 0;
     padding: 0;
     border: none;
     box-sizing: inherit;
+}
+
+body {
+    font-family: 'ABeeZee', sans-serif;
+    color: white;
+    background: url("../images/background-image.jpg") center;
+    width: 100%;
+    height: 93.4vh;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.40);
+    border-radius: 10px;
+    display: flex;
 }
 
 /* Rules Modal Window */
@@ -75,23 +95,6 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     color: black;
     padding: 10px;
     font-size: 1rem;
-}
-
-/* Main Page Layout */
-
-body {
-    font-family: 'ABeeZee', sans-serif;
-    color: white;
-    background-color: black;
-}
-
-main {
-    position: relative;
-    width: 100%;
-    height: 30rem;
-    background-color: rgba(255, 255, 255, 0.50);
-    border-radius: 10px;
-    display: flex;
 }
 
 /* Game Elements */

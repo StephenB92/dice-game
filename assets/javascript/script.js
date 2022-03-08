@@ -36,6 +36,9 @@ const playerName1 = document.querySelector('.input-name-1');
 
 const name1 = function () {
     let myName1 = prompt("Enter your name");
+    if (myName1.length === 0) {
+        return
+    } 
     document.querySelector('.input-name-1').innerText = myName1;
 };
 
@@ -43,6 +46,9 @@ const playerName2 = document.querySelector('.input-name-2');
 
 const name2 = function () {
     let myName2 = prompt("Enter your name");
+    if (myName2.length === 0) {
+        return
+    }
     document.querySelector('.input-name-2').innerText = myName2;
 };
 
