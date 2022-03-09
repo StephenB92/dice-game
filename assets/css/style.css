@@ -15,15 +15,15 @@ body {
     background: url("../images/background-image.jpg") center;
     width: 100%;
     height: 93.4vh;
-    overflow: hidden;
 }
 
 main {
     position: relative;
     width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.40);
-    border-radius: 10px;
+    height: 50%;
+    top: 25%;
+    background-color: rgba(192, 192, 192, 0.8);
+    border-radius: 100px;
     display: flex;
 }
 
@@ -33,10 +33,12 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 "rules" modal window */
 
 .show-rules {
-    top: 350px;
+    top: 15%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 2.5rem;
+    width: 20%;
 }
 
 .close-rules {
@@ -117,7 +119,29 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     letter-spacing: 1px;
     margin-top: 7rem;
     margin-bottom: 3rem;
+    cursor: pointer;
 }
+
+/* Credit to codepen.io for code used for animation below */
+
+.name:hover {
+    color: blue;
+    animation-name: color;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {
+      color: #222;
+    }
+    50% {
+      color: #4285f4;
+    }
+    100% {
+      color: #222;
+    }
+  }
 
 .score {
     font-size: 1.5rem;
@@ -133,6 +157,7 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
 .active-player {
     background-color: rgba(255, 0, 0, 0.35);
+    border-radius: 100px;
 }
 
 /* Controls and Dice Styling */
@@ -141,26 +166,28 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     color: #444;
     cursor: pointer;
     font-family: inherit;
-    font-size: 1rem;
     background-color: white;
     padding: 7px 15px;
     border-radius: 50px;
 }
 
 .button-new {
-    top: 150px;
+    top: 45%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 2rem;
 }
 
 .controls {
-    background-color: #444;
+    background-color: rgba(0, 0, 0, 0.6);
     display: inline-block;
     text-align: center;
     width: 100%;
-    height: auto;
+    height: 150px;
     padding-top: 15px;
+    position: absolute;
+    bottom: 17.2%;
 }
 
 .controls h3 {
@@ -171,14 +198,15 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
 .controls button {
     margin-bottom: 5px;
+    font-size: 2rem;
 }
 
 .dice {
     position: absolute;
     left: 50%;
-    top: 12.5rem;
+    top: 40%;
     transform: translateX(-50%);
-    height: 7.5rem;
+    height: 10rem;
 }
 
 /* Media Queries for responsiveness */
@@ -186,38 +214,25 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 /* Media Queries for screens smaller than 680px */
 
 @media screen and (max-width: 680px) {
-    html {
-        font-size: 10px;
-    }
-
-    main {
-        height: 35rem;
-    }
-
     .button {
-        font-size: 10px;
-        padding: 3px 8px;
+        font-size: 1.5rem;
     }
 
     .button-new {
-        top: 120px;
+        top: 30%;
     }
 
     .dice {
-        height: 5rem;
-        top: 160px;
-    }
-
-    .show-rules {
-        top: 225px;
+        height: 8rem;
+        top: 25%;
     }
 }
 
 /* Media Queries for screens smaller than 330px */
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 380px) {
     html {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     main {
@@ -225,20 +240,24 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     }
 
     .button {
-        font-size: 7.5px;
         padding: 2px 6px;
     }
 
-    .button-new {
-        top: 100px;
+    .dice {
+        height: 8rem;
+        top: 35%;
     }
 
-    .dice {
-        height: 5rem;
-        top: 130px;
+    .controls {
+        top: 50%;
+        height: 50px;
+    }
+
+    .button-new {
+        top: 35%;
     }
 
     .show-rules {
-        top: 185px;
+        font-size: 3rem;
     }
 }

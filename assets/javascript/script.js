@@ -79,10 +79,10 @@ let activePlayer = 0;
 const startGame = function () {
     currentScore = 0;
     activePlayer = 0;
-    score1.textcontent = 0;
-    score2.textcontent = 0;
-    total1.textcontent = 0;
-    total2.textcontent = 0;
+    score1.textContent = 0;
+    score2.textContent = 0;
+    total1.textContent = 0;
+    total2.textContent = 0;
     currentDice.classList.add('hide');
     player1.classList.add('active-player');
     player2.classList.remove('active-player');
