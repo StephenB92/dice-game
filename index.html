@@ -50,7 +50,7 @@
 
     <section>
         <img src="assets/images/dice-1.png" alt="Playing Dice" class="dice hide" />
-        <button class="button button-new">New Game</button>
+        <button class="button button-new hide">New Game</button>
         <button class="button show-rules">Rules</button>
         <div class="rules hide">
             <button class="close-rules">&times;</button>
@@ -63,26 +63,25 @@
             <ol>
                 <li>Player 1 will start the game.</li>
                 <li>Click the "Roll Dice" button to add to your score.</li>
-                <li>You can roll the dice as many times as you wish until you click the "Bank" button OR roll a 1,
-                    then
-                    control switches to the other player.</li>
-                <li>Click the "Bank" button to save your current points and pass control to the other player.</li>
+                <li>You can roll the dice as many times as you wish until you click the "Bank" button OR roll a 1.</li>
+                <li>Click the "Bank" button to add your current points to your total score and pass control to the other
+                    player.</li>
                 <li>If you roll a 1, you will lose all points that have not been banked and control will switch to
                     the
                     other player.</li>
-                <li>First player to reach 100 total points wins!!</li>
+                <li>First player to bank 100 total points wins!!</li>
             </ol>
         </div>
         <div class="rules-overlay hide"></div>
     </section>
 
-    <!-- Footer with Game Controls -->
+    <!-- Section with Game Controls -->
 
-    <footer class="controls">
+    <section class="controls">
         <h3>Roll or Bank?</h3>
         <button class="button button-roll">Roll Dice</button>
         <button class="button button-bank">Bank Points</button>
-    </footer>
+    </section>
 </body>
 
 </html>

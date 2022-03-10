@@ -133,15 +133,17 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
 @keyframes color {
     0% {
-      color: #222;
+        color: #222;
     }
+
     50% {
-      color: #4285f4;
+        color: #4285f4;
     }
+
     100% {
-      color: #222;
+        color: #222;
     }
-  }
+}
 
 .score {
     font-size: 1.5rem;
@@ -156,7 +158,7 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 }
 
 .active-player {
-    background-color: rgba(255, 0, 0, 0.35);
+    background-color: rgba(255, 0, 0, 0.6);
     border-radius: 100px;
 }
 
@@ -169,6 +171,11 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     background-color: white;
     padding: 7px 15px;
     border-radius: 50px;
+}
+
+.button:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
 }
 
 .button-new {
@@ -209,6 +216,27 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     height: 10rem;
 }
 
+.player-wins {
+    animation-name: winner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 100px;
+}
+
+@keyframes winner {
+    0% {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+
+    50% {
+        background-color: rgba(0, 128, 0, 0.6);
+    }
+
+    100% {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+}
+
 /* Media Queries for responsiveness */
 
 /* Media Queries for screens smaller than 680px */
@@ -226,6 +254,11 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
         height: 8rem;
         top: 25%;
     }
+
+    .controls {
+        bottom: 16.5%;
+
+    }
 }
 
 /* Media Queries for screens smaller than 330px */
@@ -237,6 +270,11 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
     main {
         height: 35rem;
+        border-radius: 0px;
+    }
+
+    .active-player {
+        border-radius: 0px;
     }
 
     .button {
@@ -245,7 +283,7 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
     .dice {
         height: 8rem;
-        top: 35%;
+        top: 33%;
     }
 
     .controls {
@@ -258,6 +296,6 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     }
 
     .show-rules {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
