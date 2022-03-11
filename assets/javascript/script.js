@@ -4,60 +4,15 @@
 //From Zero to Expert", Modal Window Section for Code used to create and style the 
 //"rules" modal window
 
+// Variables for Rules Display
 const rules = document.querySelector('.rules');
 const rulesOverlay = document.querySelector('.rules-overlay');
 const btnOpenModal = document.querySelectorAll('.show-rules');
 const btnCloseModal = document.querySelector('.close-rules');
-
-// Code to open the Rules Modal
-
-for (let i = 0; i < btnOpenModal.length; i++)
-    btnOpenModal[i].addEventListener('click', function () {
-        rules.classList.remove('hide');
-        rulesOverlay.classList.remove('hide');
-    });
-
-// Code to close the Rules Modal
-
-const closeModal = function () {
-    rules.classList.add('hide');
-    rulesOverlay.classList.add('hide');
-};
-
-btnCloseModal.addEventListener('click', closeModal);
-rulesOverlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && !rules.classList.contains('hide')) {
-        closeModal();
-    }
-});
-
-// Function allowing players to enter own name
-
+// Variables for Change Name Function
 const playerName1 = document.querySelector('.input-name-1');
 const playerName2 = document.querySelector('.input-name-2');
-
-playerName1.addEventListener('click', () => {
-    let myName1 = prompt("Enter your name");
-    if (myName1.length === 0) {
-        return
-    }
-    document.querySelector('.input-name-1').innerText = myName1;
-});
-
-playerName2.addEventListener('click', () => {
-    let myName2 = prompt("Enter your name");
-    if (myName2.length === 0) {
-        return
-    }
-    document.querySelector('.input-name-2').innerText = myName2;
-});
-
-// Logic which allows the Dice Game to function
-
-// Converting the HTML elements to variables
-
+// Variables for Gameplay
 const player1 = document.querySelector('.player-0');
 const player2 = document.querySelector('.player-1');
 const score1 = document.querySelector('.score-0');
@@ -69,13 +24,37 @@ const newGame = document.querySelector('.button-new');
 const rollDice = document.querySelector('.button-roll');
 const bankPoints = document.querySelector('.button-bank');
 const control = document.querySelector('.controls');
-
-// Base Game values
-
+// Variables for Base Game values 
 let scores = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+// Game Functions
+
+// Code to open the Rules Modal
+
+for (let i = 0; i < btnOpenModal.length; i++)
+    btnOpenModal[i].addEventListener('click', function () {
+        rules.classList.remove('hide');
+        rulesOverlay.classList.remove('hide');
+    });
+
+// Functions to close the Rules Modal
+const closeModal = function () {
+    rules.classList.add('hide');
+    rulesOverlay.classList.add('hide');
+};
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !rules.classList.contains('hide')) {
+        closeModal();
+    }
+});
+
+btnCloseModal.addEventListener('click', closeModal);
+rulesOverlay.addEventListener('click', closeModal);
+
+// Function that starts and resets game
 const startGame = () => {
     scores = [0, 0];
     currentScore = 0;
@@ -89,51 +68,99 @@ const startGame = () => {
     player2.classList.remove('active-player');
     player1.classList.remove('player-wins');
     player2.classList.remove('player-wins');
+    control.classList.add('controls');
     control.classList.remove('hide');
     newGame.classList.add('hide');
 };
-startGame();
 
+// Functions allowing players to enter own name
+function changeName1() {
+    playerName1.addEventListener('click', () => {
+        let myName1 = prompt("Enter your name");
+        if (myName1.length === 0) {
+            return;
+        }
+        document.querySelector('.input-name-1').innerText = myName1;
+    });
+}
+
+function changeName2() {
+    playerName2.addEventListener('click', () => {
+        let myName2 = prompt("Enter your name");
+        if (myName2.length === 0) {
+            return;
+        }
+        document.querySelector('.input-name-2').innerText = myName2;
+    });
+}
+
+// Function to switch active player
 const switchPlayer = () => {
     document.querySelector(`.score-${activePlayer}`).textContent = 0;
     currentScore = 0;
     activePlayer = activePlayer === 0 ? 1 : 0;
     player1.classList.toggle('active-player');
     player2.classList.toggle('active-player');
+};
+
+//Function to Roll Dice and add to Score
+function playDice() {
+    rollDice.addEventListener('click', function () {
+        // Creating a random dice and displaying it
+        let dice = Math.trunc(Math.random() * 6) + 1;
+        currentDice.classList.remove('hide');
+        currentDice.src = `assets/images/dice-${dice}.png`;
+        // Checking if Dice = 1 and adding to Current Score if !== 1
+        if (dice !== 1) {
+            currentScore += dice;
+            document.querySelector(`.score-${activePlayer}`).textContent = currentScore;
+        } else {
+            // Switching player if Dice = 1 
+            switchPlayer();
+        }
+    });
 }
 
-// Rolling the Dice function
+//Function to Bank Dice and add to Total
+function bankDice() {
+    bankPoints.addEventListener('click', () => {
+        scores[activePlayer] += currentScore;
+        document.querySelector(`.total-${activePlayer}`).textContent = scores[activePlayer];
+        if (scores[activePlayer] >= 10) {
+            document.querySelector(`.player-${activePlayer}`).classList.add('player-wins');
+            control.classList.add('hide');
+            currentDice.classList.add('hide');
+            control.classList.remove('controls');
+            control.classList.add('hide');
+            newGame.classList.remove('hide');
+        } else {
+            switchPlayer();
+        }
+    });
+}
 
-rollDice.addEventListener('click', function () {
-    // Creating a random dice and displaying it
-    let dice = Math.trunc(Math.random() * 6) + 1;
-    currentDice.classList.remove('hide');
-    currentDice.src = `assets/images/dice-${dice}.png`;
-    // Checking if Dice = 1 and adding to Current Score if !== 1
-    if (dice !== 1) {
-        currentScore += dice;
-        document.querySelector(`.score-${activePlayer}`).textContent = currentScore;
-    } else {
-        // Switching player if Dice = 1 
-        switchPlayer();
-    }
-});
+// Calling Functions allowing Game to progress
 
-// Banking Points Function
+//Start/Reset Game
+startGame();
 
-bankPoints.addEventListener('click', () => {
-    scores[activePlayer] += currentScore;
-    document.querySelector(`.total-${activePlayer}`).textContent = scores[activePlayer];
-    if (scores[activePlayer] >= 10) {
-        document.querySelector(`.player-${activePlayer}`).classList.add('player-wins');
-        control.classList.add('hide');
-        currentDice.classList.add('hide');
-        control.classList.add('hide');
-        newGame.classList.remove('hide');
-    } else {
-        switchPlayer();
-    }
-});
+//Allow Players to change Name
+changeName1();
+changeName2();
 
-// New Game Button 
+// Player clicks "Roll Dice"
+playDice();
+
+// Player clicks "Roll Dice"
+bankDice();
+
+// When the New Game button is clicked and the game resets
 newGame.addEventListener('click', startGame);
+
+
+
+
+
+
+
+

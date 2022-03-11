@@ -52,10 +52,6 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     background: none;
 }
 
-.hide {
-    display: none;
-}
-
 .rules-overlay {
     position: absolute;
     top: 0;
@@ -112,7 +108,7 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     justify-content: center;
 }
 
-.name {
+.player-name {
     position: relative;
     text-align: center;
     font-size: 2rem;
@@ -124,7 +120,7 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
 /* Credit to codepen.io for code used for animation below */
 
-.name:hover {
+.player-name:hover {
     color: blue;
     animation-name: color;
     animation-duration: 1.5s;
@@ -145,13 +141,13 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     }
 }
 
-.score {
+.player-score {
     font-size: 1.5rem;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.total {
+.player-total {
     font-size: 1.5rem;
     margin-bottom: auto;
     text-align: center;
@@ -160,6 +156,31 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 .active-player {
     background-color: rgba(255, 0, 0, 0.6);
     border-radius: 100px;
+}
+
+.player-wins {
+    animation-name: winner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 100px;
+}
+
+@keyframes winner {
+    0% {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+
+    50% {
+        background-color: rgba(0, 128, 0, 0.6);
+    }
+
+    100% {
+        background-color: rgba(255, 0, 0, 0.6);
+    }
+}
+
+.hide {
+    display: none;
 }
 
 /* Controls and Dice Styling */
@@ -194,7 +215,7 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     height: 150px;
     padding-top: 15px;
     position: absolute;
-    bottom: 17.2%;
+    bottom: 16.2%;
 }
 
 .controls h3 {
@@ -216,27 +237,6 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     height: 10rem;
 }
 
-.player-wins {
-    animation-name: winner;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    border-radius: 100px;
-}
-
-@keyframes winner {
-    0% {
-        background-color: rgba(255, 0, 0, 0.6);
-    }
-
-    50% {
-        background-color: rgba(0, 128, 0, 0.6);
-    }
-
-    100% {
-        background-color: rgba(255, 0, 0, 0.6);
-    }
-}
-
 /* Media Queries for responsiveness */
 
 /* Media Queries for screens smaller than 680px */
@@ -256,14 +256,13 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     }
 
     .controls {
-        bottom: 16.5%;
-
+        bottom: 16.2%;
     }
 }
 
-/* Media Queries for screens smaller than 330px */
+/* Media Queries for screens smaller than 440px */
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 440px) {
     html {
         font-size: 9px;
     }

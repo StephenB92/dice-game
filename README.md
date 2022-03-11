@@ -31,6 +31,8 @@ The Dice Game is a simple yet fun game for two players. Roll the dice to add to 
 
 1. Play against the computer functionality
 - In a future update, I would like to include an additional button on the main game area that allows the user to play against the computer if another player is not available.
+2. Track Game Points
+- In a future update, I would like to include a feature that counts how many games a player has won and therefore add an extra level to the game, such as "best out of three".
 
 ## Wireframes
 
@@ -49,6 +51,7 @@ The Dice Game is a simple yet fun game for two players. Roll the dice to add to 
 1. I experienced an issue with the "Enter your Name" function where the text entered in the prompt window was not then appearing in the HTML page. This was due to me using the    
 .getElementsByClassName function method rather than .querySelector. Once I changed the method to 
 .querySelector, the text entered in the prompt window appeared in the main game area as intended.
+2. I experienced an issue when coding to remove the game controls when a player has won and the game is over, only to re-appear when the "New Game" button is clicked. Otherwise, players would be able to keep clicking buttons and adding to scores despite the game being over. The existing styling I had on the controls section was overriding the "Hide" class I attempted to add using a JavaScript function. I had tried using "!important" which did work, but as this is not industry standard and gernerally disliked, I found the solution was to remove the existing class on the controls section and then add the "Hide" class using Javascript.
 
 ## Credit
 
