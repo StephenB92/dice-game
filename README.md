@@ -6,6 +6,12 @@ The Dice Game is a simple yet fun game for two players. Roll the dice to add to 
 
 You can view the published site [here](https://stephenb92.github.io/javascript-portfolio-project/).
 
+## Project Goals and Target Audience
+
+The premise of Dice Game is very simple and fun. It is intended to be played by everyone and the page is laid out to accomodate this. When players open the game, they will see the rules button at the top of the page which will explain the premise of the game and how to win. Looking further down the screen, the text "Enter your name" can be seen and when players hover the mouse over this text, an animation starts that changes the text colour, prompting them to click in and enter their name. Then underneath this, the game controls with the text "Roll Dice" and "Bank Points" can be seen.
+
+It is intended to be a quick, pick up and play game that can be enjoyed by everyone.
+
 ## Design
 
 1. Colour Scheme

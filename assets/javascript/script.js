@@ -33,26 +33,30 @@ let activePlayer = 0;
 //From Zero to Expert", for Code used to create the "rules" modal window.
 
 // Code to open the Rules Modal
-for (let i = 0; i < btnOpenModal.length; i++)
-    btnOpenModal[i].addEventListener('click', function () {
-        rules.classList.remove('hide');
-        rulesOverlay.classList.remove('hide');
+function openRules() {
+    for (let i = 0; i < btnOpenModal.length; i++)
+        btnOpenModal[i].addEventListener('click', function () {
+            rules.classList.remove('hide');
+            rulesOverlay.classList.remove('hide');
+        });
+}
+
+// Function to close the Rules Modal
+function closeRules() {
+    const closeModal = function () {
+        rules.classList.add('hide');
+        rulesOverlay.classList.add('hide');
+    };
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && !rules.classList.contains('hide')) {
+            closeModal();
+        }
     });
 
-// Functions to close the Rules Modal
-const closeModal = function () {
-    rules.classList.add('hide');
-    rulesOverlay.classList.add('hide');
-};
-
-document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && !rules.classList.contains('hide')) {
-        closeModal();
-    }
-});
-
-btnCloseModal.addEventListener('click', closeModal);
-rulesOverlay.addEventListener('click', closeModal);
+    btnCloseModal.addEventListener('click', closeModal);
+    rulesOverlay.addEventListener('click', closeModal);
+}
 
 // Functions allowing players to enter own name
 
@@ -153,6 +157,12 @@ function bankDice() {
 
 //Start/Reset Game
 startGame();
+
+//Open Rules Modal
+openRules();
+
+//Close Rules Modal
+closeRules();
 
 //Allow Players to change Name
 changeName1();
