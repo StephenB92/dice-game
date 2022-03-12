@@ -9,13 +9,15 @@
     <meta name="keywords" content="dice game, two players, dice, game">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <script src="assets/javascript/script.js" defer></script>
     <title>Dice Game</title>
 </head>
 
 <body>
 
     <!-- Playing Board -->
+
+    <!-- Credit to Jonas Schmedmann and the Udemy course "The Complete Javascript Course 2022: 
+    From Zero to Expert", where the HTML template of the Dice Game was found and used in this project. -->
 
     <main>
         <section class="player player-0 active-player">
@@ -54,12 +56,17 @@
         <button class="button button-bank">Bank Points</button>
     </section>
 
-    <!-- Section with Dice image, New Game button and Rules Modal -->
+    <!-- Section with Dice image, Show Rules and New Game buttons -->
 
-    <section>
+    <div>
         <img src="assets/images/dice-1.png" alt="Playing Dice" class="dice hide" />
         <button class="button button-new hide">New Game</button>
         <button class="button show-rules">Rules</button>
+    </div>
+
+    <!-- Aside for Rules Modal -->
+
+    <aside>
         <div class="rules hide">
             <button class="close-rules">&times;</button>
             <h1>Rules of the Game</h1>
@@ -81,7 +88,8 @@
             </ol>
         </div>
         <div class="rules-overlay hide"></div>
-    </section>
+    </aside>
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>

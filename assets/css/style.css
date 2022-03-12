@@ -29,7 +29,7 @@ main {
 
 /* Rules Modal Window */
 /* Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
-From Zero to Expert", Modal Window Section for Code used to create and style the 
+From Zero to Expert", for Code used to create and style the 
 "rules" modal window */
 
 .show-rules {
@@ -97,6 +97,9 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
 
 /* Game Elements */
 
+/* Credit to Jonas Schmedmann and the Udemy course "The Complete Javascript Course 2022: 
+From Zero to Expert", where Code for the main section styling was used as a template for this project. */
+
 .player {
     padding: 40px;
     align-items: center;
@@ -162,6 +165,8 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     animation-iteration-count: infinite;
     border-radius: 100px;
 }
+
+/* Credit to codepen.io for code used for animation below */
 
 @keyframes winner {
     0% {
@@ -246,6 +251,10 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
         font-size: 1.5rem;
     }
 
+    .show-rules {
+        font-size: 1.5rem;
+    }
+
     .button-new {
         top: 30%;
     }
@@ -271,6 +280,15 @@ From Zero to Expert", Modal Window Section for Code used to create and style the
     main {
         height: 35rem;
         border-radius: 0px;
+    }
+
+    .controls {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .controls button {
+        font-size: 1.5rem;
     }
 
     .active-player {

@@ -1,8 +1,6 @@
-// Rules Modal Window
-
 // Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
-//From Zero to Expert", Modal Window Section for Code used to create and style the 
-//"rules" modal window
+//From Zero to Expert", for Code used to create and style the 
+//"rules" modal window as well as the Roll Dice, Switch Player, Bank Points and New Game functions.
 
 // Variables for Rules Display
 const rules = document.querySelector('.rules');
@@ -31,8 +29,10 @@ let activePlayer = 0;
 
 // Game Functions
 
-// Code to open the Rules Modal
+// Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
+//From Zero to Expert", for Code used to create the "rules" modal window.
 
+// Code to open the Rules Modal
 for (let i = 0; i < btnOpenModal.length; i++)
     btnOpenModal[i].addEventListener('click', function () {
         rules.classList.remove('hide');
@@ -54,26 +54,11 @@ document.addEventListener('keydown', function (event) {
 btnCloseModal.addEventListener('click', closeModal);
 rulesOverlay.addEventListener('click', closeModal);
 
-// Function that starts and resets game
-const startGame = () => {
-    scores = [0, 0];
-    currentScore = 0;
-    activePlayer = 0;
-    score1.textContent = 0;
-    score2.textContent = 0;
-    total1.textContent = 0;
-    total2.textContent = 0;
-    currentDice.classList.add('hide');
-    player1.classList.add('active-player');
-    player2.classList.remove('active-player');
-    player1.classList.remove('player-wins');
-    player2.classList.remove('player-wins');
-    control.classList.add('controls');
-    control.classList.remove('hide');
-    newGame.classList.add('hide');
-};
-
 // Functions allowing players to enter own name
+
+// Credit to Golang for information and code used to implement feature 
+// allowing users to enter their names to the main page.
+
 function changeName1() {
     playerName1.addEventListener('click', () => {
         let myName1 = prompt("Enter your name");
@@ -93,6 +78,31 @@ function changeName2() {
         document.querySelector('.input-name-2').innerText = myName2;
     });
 }
+
+// Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
+//From Zero to Expert", for Code used to create the New Game function.
+
+// Function that starts and resets game
+const startGame = () => {
+    scores = [0, 0];
+    currentScore = 0;
+    activePlayer = 0;
+    score1.textContent = 0;
+    score2.textContent = 0;
+    total1.textContent = 0;
+    total2.textContent = 0;
+    currentDice.classList.add('hide');
+    player1.classList.add('active-player');
+    player2.classList.remove('active-player');
+    player1.classList.remove('player-wins');
+    player2.classList.remove('player-wins');
+    control.classList.add('controls');
+    control.classList.remove('hide');
+    newGame.classList.add('hide');
+};
+
+// Credit to Jonas Schmedmann and the course "The Complete Javascript Course 2022: 
+//From Zero to Expert", for Code used to create the Roll Dice, Bank Points and Switch Player functions.
 
 // Function to switch active player
 const switchPlayer = () => {
@@ -126,7 +136,7 @@ function bankDice() {
     bankPoints.addEventListener('click', () => {
         scores[activePlayer] += currentScore;
         document.querySelector(`.total-${activePlayer}`).textContent = scores[activePlayer];
-        if (scores[activePlayer] >= 10) {
+        if (scores[activePlayer] >= 100) {
             document.querySelector(`.player-${activePlayer}`).classList.add('player-wins');
             control.classList.add('hide');
             currentDice.classList.add('hide');
