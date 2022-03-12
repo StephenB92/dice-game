@@ -20,8 +20,19 @@ You can view the published site [here](https://stephenb92.github.io/javascript-p
 ## Wireframes
 
 ### Desktop
-1. Please find the wireframe for the main game page [here](assets/wireframes/desktop/main-page.png).
-2. Please find the wireframe for the rules modal window [here](assets/wireframes/desktop/rules-modal.png).
+
+1. Please find the wireframe for the main game page on a desktop [here](assets/wireframes/desktop/main-page-desktop.png).
+2. Please find the wireframe for the rules modal on a desktop [here](assets/wireframes/desktop/rules-modal-desktop.png).
+
+### Tablet
+
+1. Please find the wireframe for the main game page on a tablet [here](assets/wireframes/tablet/main-page-tablet.png).
+2. Please find the wireframe for the rules modal on a tablet [here](assets/wireframes/tablet/rules-modal-tablet.png).
+
+### Mobile
+
+1. Please find the wireframe for the main game page on a mobile device [here](assets/wireframes/mobile/main-page-mobile.png).
+2. Please find the wireframe for the rules modal on a mobile device [here](assets/wireframes/mobile/rules-modal-mobile.png).
 
 ## Coding Languages Used
 
@@ -58,9 +69,9 @@ You can view the published site [here](https://stephenb92.github.io/javascript-p
 ### Future Features
 
 1. Play against the computer functionality
-- In a future update, I would like to include an additional button on the main game area that allows the user to play against the computer if another player is not available.
+* In a future update, I would like to include an additional button on the main game area that allows the user to play against the computer if another player is not available.
 2. Track Game Points
-- In a future update, I would like to include a feature that counts how many games a player has won and therefore add an extra level to the game, such as "best out of three".
+* In a future update, I would like to include a feature that counts how many games a player has won and therefore add an extra level to the game, such as "best out of three".
 
 ## Testing
 
@@ -78,6 +89,11 @@ The page has been also tested using Lighthouse on Chrome Dev Tools.
 
 1. Desktop results [here](assets/testing-screenshots/desktop-lighthouse-results.png).
 2. Mobile results [here](assets/testing-screenshots/mobile-lighthouse-results.png).
+
+### Responsive Design
+
+The project has been tested through [Am I responsive](http://ami.responsivedesign.is/) and is responsive on all devices.
+![Responsive Screenshot](assets/testing-screenshots/responsive-testing.png)
 
 ## Bugs and Fixes
 
