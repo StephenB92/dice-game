@@ -156,11 +156,3 @@ bankDice();
 
 // When the New Game button is clicked and the game resets
 newGame.addEventListener('click', startGame);
-
-
-
-
-
-
-
-

@@ -4,28 +4,33 @@
 
 The Dice Game is a simple yet fun game for two players. Roll the dice to add to your score - the first player to reach 100 points wins!! Be wary though, if you roll a one you will lose all of your current points. To avoid this, press the bank button to save your current points and pass the game to the next player.
 
+You can view the published site [here](https://stephenb92.github.io/javascript-portfolio-project/).
+
 ## Features
 
 ### Existing Features
 
 1. The Dice Game Main Page. 
 - Here we have the main game page for Dice Game. This displays players 1 and 2 and their respective scores. The goal of both players is to reach 100 in their Total Score.
-- Between the scores for both players - you can see the interactive buttons labelled "New Game" and "Rules" with an image of the dice rolled last displayed in between.
-- The "New Game" button, which appears only when the current game is over, will reset the game to it's initial state when clicked.
-- The "Rules" button when clicked opens a modal window that contains a short description of the game along with the rules.
+- Between the scores for both players - an image of the dice rolled last is displayed in between when players click the "Roll Dice" button.
+- The "New Game" button, which appears only when the current game is over and replaces the image of the dice, will reset the game to it's initial state when clicked.
+- The "Rules" button on the top of the page, when clicked opens a modal window that contains a short description of the game along with the rules.
 - Players can also click on the "Enter Your Name" text and a prompt window will appear asking the player to type in their name. What they enter will then appear on the Main Page.
+![Main Game Board Screenshot](assets/screenshots/main-screenshot.png)
+![Main Game Board Screenshot (with dice)](assets/screenshots/main-dice-screenshot.png)
 
 2. The Rules modal window
 - As mentioned above, this window will only appear when the "Rules" button on the main game page is clicked.
 - This window contains a description of the game along with its rules.
 - The user can close this modal window by clicking the "X" in the top right corner, clicking outside of the modal window or even by pressing the "Escape" key.
-![Rules Modal Screenshot](assets/screenshots/rules-modal.png)
+![Rules Button Screenshot](assets/screenshots/rules-button-screenshot.png)
+![Rules Modal Screenshot](assets/screenshots/rules-modal-screenshot.png)
 
 3. The footer with the game controls.
 - The text above the controls summarises the functions of both buttons - "Roll or Bank?"
 - When the active player clicks the "Roll Dice" button, a JavaScript function is called in the background that will generate a random dice between 1 - 6. The number appearing on that dice will be added to the active players "Current Score" (unless a 1 is rolled) and an image of that dice will be displayed in the center of the main game area.
 - When the active player clicks the "Bank Points" button, a separate JavaScript funcion is called the will add the number currently displayed as the "Current Score" to the active players "Total Score". Clicking this button will also end the active players turn and control will switch to the other player.
-![Footer Controls Screenshot](assets/screenshots/controls-footer.png)
+![Footer Controls Screenshot](assets/screenshots/controls-screenshot.png)
 
 ### Future Features
 
@@ -37,14 +42,41 @@ The Dice Game is a simple yet fun game for two players. Roll the dice to add to 
 ## Wireframes
 
 ### Desktop
-1. Please find the wireframe for the main game page [here.](assets/wireframes/desktop/main-page.png)
-2. Please find the wireframe for the rules modal window [here.](assets/wireframes/desktop/rules-modal.png)
+1. Please find the wireframe for the main game page [here](assets/wireframes/desktop/main-page.png).
+2. Please find the wireframe for the rules modal window [here](assets/wireframes/desktop/rules-modal.png).
 
-## Coding Languages Used
+### Coding Languages Used
 
 1. HTML 5
 2. CSS3
 3. JavaScript
+
+## Testing
+
+### Validator Testing
+
+1. HTML - No errors were returned on any of the project pages when passing through the official [W3C Markup Validator](https://validator.w3.org/).
+![HTML Validator Results](assets/testing-screenshots/html-validator-results.png)
+2. CSS - No errors found when passing through the official [W3C Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator).
+![CSS Validator Results](assets/testing-screenshots/css-validator-results.png)
+
+### Lighthouse Testing
+
+The page has been also tested using Lighthouse on Chrome Dev Tools.
+
+1. Desktop results [here](assets/testing-screenshots/desktop-lighthouse-results.png).
+2. Mobile results [here](assets/testing-screenshots/mobile-lighthouse-results.png).
+
+## Deployment on GitHub
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the GitHub [repository](https://github.com/StephenB92/javascript-portfolio-project).
+2. In the GitHub repository, navigate to the Settings tab.
+3. In the Settings, navigate to the GitHub Pages section.
+4. From the source section drop-down menu, select the main branch.
+5. Once the main branch is selected, click on save.
+6. Once save has been clicked, the page will refresh and a link to the successfully deployed project is shown.
 
 ## Bugs and Fixes
 
@@ -66,3 +98,8 @@ From Zero to Expert, Modal Window Section](https://www.udemy.com/course/the-comp
 ### Media
 
 - Credit to [Clip Art Library](http://clipart-library.com/) for the dice images used in the game.
+- Credit to [Pexels](https://www.pexels.com/photo/6-pieces-of-black-and-white-dice-37534/) for the background image appearing in the game.
+
+### Acknowledgements
+
+- My mentor Narender Singh for continuous helpful feedback.
