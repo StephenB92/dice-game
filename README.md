@@ -4,7 +4,7 @@
 
 The Dice Game is a simple yet fun game for two players. Roll the dice to add to your score - the first player to reach 100 points wins!! Be wary though, if you roll a one you will lose all of your current points. To avoid this, press the bank button to save your current points and pass the game to the next player.
 
-You can view the published site [here](https://stephenb92.github.io/javascript-portfolio-project/).
+You can view the published site [here](https://stephenb92.github.io/dice-game/).
 
 ## Project Goals and Target Audience
 
